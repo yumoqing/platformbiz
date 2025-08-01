@@ -1,3 +1,0 @@
-# git+https://git.kaiyuancloud.cn/yumoqing/rbac
-# git+https://git.kaiyuancloud.cn/yumoqing/accounting
-# git+https://git.kaiyuancloud.cn/yumoqing/pf_pay
