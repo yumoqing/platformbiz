@@ -1,0 +1,40 @@
+{
+	"tblname":"prodtype",
+	"uitype":"tree",
+	"alias":"choose_prodtype",
+	"params":{
+		"toolbar":{
+			"bar_cwidth":2,
+			"tools":[
+				{
+					"name":"test",
+					"selected_data":true,
+					"label":"TEST"
+				}
+			]
+		},
+		"binds":[
+			{
+				"wid":"self",
+				"event":"prodauth",
+				"actiontype":"urlwidget",
+				"target":"PopupWindow",
+				"options":{
+					"url":"{{entire_url('platformbiz/ag.dspy')}}",
+					"params":{
+						"agreedetailid":"{{params_kw.agreedetailid}}"
+					}
+				}
+			}
+		],
+		"idField":"id",
+		"textField":"name",
+		"editable":true,
+		"browserfields":{
+			"alters":{}
+		},
+		"edit_exclouded_fields":["del_flg", "create_at"],
+		"parentField":"parentid"
+	}
+}
+

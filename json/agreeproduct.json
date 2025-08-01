@@ -1,0 +1,13 @@
+{
+	"tblname":"agreeproduct",
+	"params":{
+		"logined_userorgid":"orgid",
+        "browserfields": {
+            "exclouded": ["id", "agreedetailid"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id", "agreedetailid", "resellerpid"
+        ]
+	}
+}

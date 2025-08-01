@@ -1,0 +1,24 @@
+{
+	"tblname":"prodtype",
+	"uitype":"tree",
+	"params":{
+        "idField":"id",
+        "textField":"name",
+		"parentField":"parentid",
+        "editable":true,
+        "browserfields": {
+            "exclouded": ["id", "parentid" ],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id", "parentid"
+        ],
+		"subtables":[
+			{
+				"field":"prodtypeid",
+				"title":"产品类型",
+				"subtable":"prodtypespec"
+			}
+		]
+	}
+}

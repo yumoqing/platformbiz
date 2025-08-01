@@ -1,0 +1,15 @@
+{
+	"tblname":"prodtypespec",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id", "prodtypeid"],
+            "alters": {}
+        },
+		"data_params":{
+			"prodtypeid":"${params_kw.id}"
+		},
+        "editexclouded": [
+            "id", "prodtypeid"
+        ]
+	}
+}

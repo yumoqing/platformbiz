@@ -1,0 +1,33 @@
+[
+	{
+		"name":"agree",
+		"label":"供应商管理",
+		"url":"{{entire_url('/platformbiz/provider')}}"
+	},
+	{
+		"name":"paychannel",
+		"label":"支付渠道",
+		"url":"{{entire_url('paychannel')}}"
+	},
+	{
+		"name":"prodtype",
+		"label":"产品类型",
+		"url":"{{entire_url('/platformbiz/prodtype')}}"
+	},
+	{
+		"name":"recharge",
+		"label":"充值",
+		"items":[
+			{
+				"name":"recharge_log",
+				"label":"充值日志"
+				"url":"{{entire_url('/platformbiz/recharge_log')}}"
+			},
+			{
+				"name":"recharge_4u",
+				"label":"充值错账处理",
+				"url":"{{entire_url('/platformbiz/rechange_accounting.ui')}}"
+			}
+		]
+	}
+]

@@ -1,0 +1,20 @@
+{
+	"tblname":"prodpricing",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id", "prodid" ],
+            "alters": {
+			}
+        },
+        "editexclouded": [
+            "id", "prodid"
+        ],
+		"subtables":[
+			{
+				"field":"prodpricingid",
+				"subtable":"prodpricingtab",
+				"title":"产品定价表"
+			}
+		]
+	}
+}

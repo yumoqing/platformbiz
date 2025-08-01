@@ -1,0 +1,18 @@
+username = params_kw.username
+db = DBPools()
+dbname = await rfexe('get_module_dbname', 'platformbiz')
+async with db.sqlorContext(dbname) as sor: 
+	if username:
+		sql = "select * from users where username = ${username}$"
+		recs = await sor.sqlExe(sql, {'username':username})
+		if len(recs) > 0:
+			userorgid = recs[0].orgid
+		else:
+			e = Exception(f'{user}:user not found')
+			exception(f'Eeception:{e}')
+			raise e
+	else:
+		userorgid = await get_userorgid()
+	await openCustomerAccounts(sor, '0', userorgid)
+	return "开帐成功"
+return "开帐失败"

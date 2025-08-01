@@ -1,0 +1,30 @@
+[
+	{
+		"name":"product",
+		"label":"产品管理",
+		"url":"{{entire_url('/platformbiz/product')}}"
+	},
+	{
+		"name":"coupon",
+		"label":"代金券",
+		"items":[
+			{
+				"name":"coupontype",
+				"label":"代金券设置"
+				"url":"{{entire_url('/platformbiz/coupontype')}}"
+			},
+			{
+				"name":"coupon_issue",
+				"label":"代金券发放",
+				"url":"{{entire_url('/platformbiz/coupon_issue.ui')}}"
+			},
+			{
+				"name":"coupon",
+				"label":"代金券管理",
+				"url":"{{entire_url('/platformbiz/coupon')}}"
+			}
+		]
+	}
+]
+				
+		

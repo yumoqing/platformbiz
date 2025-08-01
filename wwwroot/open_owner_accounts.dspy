@@ -1,0 +1,6 @@
+db = DBPools()
+dbname = await rfexe('get_module_dbname', 'accounting')
+async with db.sqlorContext(dbname) as sor:
+	await openOwnerAccounts(sor, '0')
+	return 'OK'
+return 'error'

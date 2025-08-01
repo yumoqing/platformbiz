@@ -1,0 +1,12 @@
+{
+	"tblname":"prodpricingtab",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id", "prodid"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id", "prodid"
+        ]
+	}
+}

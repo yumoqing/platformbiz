@@ -1,0 +1,30 @@
+{
+	"tblname":"agreement",
+	"alias":"provide_agree",
+	"params":{
+		"title":"供应协议",
+		"logined_userorgid":"resellerid",
+        "browserfields": {
+            "exclouded": ["id", "resellerid" ],
+            "alters": {
+				"providerid":{
+					"uitype":"search",
+					"search_event":"row_selected",
+					"search_url":"{{entire_url('../select_org')}}",
+					"valueField":"id",
+					"textField":"orgname"
+				}
+			}
+        },
+		"subtables":[
+			{
+				"title":"协议明细",
+				"subtable":"provide_agreedetail",
+				"field":"agreeid"
+			}
+		],
+        "editexclouded": [
+            "id", "resellerid" 
+        ]
+	}
+}

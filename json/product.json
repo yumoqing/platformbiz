@@ -1,0 +1,24 @@
+{
+	"tblname":"product",
+	"params":{
+		"logined_userorgid":"orgid",
+        "browserfields": {
+            "exclouded": ["id", "orgid", "providerid", "agreeid", "providerpid" ],
+            "alters": {
+			}
+        },
+        "editexclouded": [
+            "id", "orgid", "providerid", "agreeid", "providerpid"
+        ],
+		"subtables":[
+			{
+				"field":"prodid",
+				"params":{
+					"prodtypeid":"${prodtypeid}"
+				},
+				"subtable":"prodpricing",
+				"title":"产品定价"
+			}
+		]
+	}
+}

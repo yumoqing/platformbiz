@@ -1,0 +1,23 @@
+{
+	"tblname":"agreedetail",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id", "agreeid"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id", "agreeid"
+        ],
+		"subtables":[
+			{
+				"field":"agreedetailid",
+				"title":"协议产品",
+				"params":{
+					"agreeid":"${agreeid}",
+					"prodtypeid":"${prodtypeid}"
+				},
+				"subtable":"agreeproduct"
+			}
+		]
+	}
+}

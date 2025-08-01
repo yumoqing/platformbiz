@@ -1,0 +1,12 @@
+{
+	"tblname":"paychannel",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id"
+        ]
+	}
+}

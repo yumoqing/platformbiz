@@ -1,0 +1,12 @@
+{
+	"tblname":"biz_order",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id"
+        ]
+	}
+}

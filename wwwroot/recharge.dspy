@@ -1,0 +1,17 @@
+debug(f'{params_kw=}')
+try:
+	userid = await get_user()
+	userorgid = await get_userorgid()
+	r = Recharge(userorgid, userid, float(params_kw.recharge_amt), params_kw.channel)
+	url = await r.start_recharge()
+	return {
+		"widgettype":"NewWindow",
+		"options":{
+			"url":url
+		}
+	}
+except Exception as e:
+	es = format_exc()
+	exception(f'{e=}, {es}')
+	return UiError(title='Error', message=f'Error:{e},trackback={es}')
+

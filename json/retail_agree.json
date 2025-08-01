@@ -1,0 +1,25 @@
+{
+	"tblname":"agreement",
+	"alias":"retail_agree",
+	"params":{
+		"title":"分销协议",
+		"sortby":"name",
+		"logined_userorgid":"providerid",
+		"logined_userid":"provideruid",
+        "browserfields": {
+            "exclouded": ["id", "providerid", "provideruid" ],
+            "alters": {
+				"resellerid":{
+					"uitype":"search",
+					"search_event":"row_selected",
+					"search_url":"{{entire_url('../select_org')}}",
+					"valueField":"id",
+					"textField":"orgname"
+				}
+			}
+        },
+        "editexclouded": [
+            "id", "providerid", "provideruid"
+        ]
+	}
+}

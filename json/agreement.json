@@ -1,0 +1,32 @@
+{
+	"tblname":"agreement",
+	"params":{
+		"toolbar":{
+			"tools":[
+				{
+					"name":"prodauth",
+					"selected_row":true,
+					"label":"授权"
+				}
+			]
+		},
+		"binds":[
+			{
+				"wid":"self",
+				"event":"prodauth",
+				"actiontype":"urlwidget",
+				"target":"PopupWindow",
+				"options":{
+					"url":"{{entire_url('../agree_prodclone.dspy')}}"
+				}
+			}
+		],
+        "browserfields": {
+            "exclouded": ["id"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id"
+        ]
+	}
+}

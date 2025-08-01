@@ -1,0 +1,12 @@
+{
+	"tblname":"coupontype",
+	"params":{
+        "browserfields": {
+            "exclouded": ["id"],
+            "alters": {}
+        },
+        "editexclouded": [
+            "id"
+        ]
+	}
+}

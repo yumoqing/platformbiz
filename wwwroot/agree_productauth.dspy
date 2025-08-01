@@ -1,0 +1,7 @@
+debug(f'{params_kw=}')
+db = DBPools()
+dbname = await get_module_dbname('platformbiz')
+async with db.sqlorContext(dbname) as sor:
+	await agreedetail_products_clone(params_kw.agreedetailid)
+	return UiMessage(title='clone product', message='OK')
+return UiError(title='Product clone', message='Product clone error')
