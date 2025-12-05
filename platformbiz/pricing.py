@@ -225,7 +225,7 @@ where a.id = ${productid}$
 			'list_price': list_price,
 			'sell_price': sell_price
 		}
-	elif prod.pricing_method == '1':
+	elif prod.pricing_method == '9':
 		# 外部计费
 		f = get_serverenv('pricing_api')
 		list_price = await f(sor, prod.apiid, providerpid, prod_config)

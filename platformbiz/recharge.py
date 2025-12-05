@@ -3,6 +3,7 @@ from appPublic.registerfunction import rfexe
 from appPublic.log import exception, debug
 from sqlor.dbpools import DBPools
 from pf_pay.ali_pay import Zhifubao_Pay
+from pf_pay.wechat_pay_h5 import WechatPayClient
 from platformbiz.getdbname import get_dbname
 from platformbiz.biz_order import add_recharge_log, add_recharge_order
 
@@ -12,17 +13,11 @@ class Recharge:
 		self.userid = userid
 		self.recharge_amt = recharge_amt
 		self.pc_name = pc_name
-		if pc_name not in ['alipay']:
-			raise Exception(f'{pc_name} pay channel not implemented')
 
 	async def start_recharge(self):
 		return await self.start_recharge_action('RECHARGE')
 
-
-	async def start_recharge_reverse(self):
-		return await self.start_recharge_action('RECHARGE_REVERSE')
-
-	async def start_recharge_action(self, action):
+	async def start_recharge_action(self, request, action):
 		db = DBPools()
 		dbname = get_dbname()
 		async with db.sqlorContext(dbname) as sor:
@@ -42,6 +37,10 @@ class Recharge:
 			if self.pc_name == 'alipay':
 				z = Zhifubao_Pay()
 				url = await z.alipay_payment(rl.id, rl.recharge_amt, action)
+				return url
+			if self.pc_name == 'wxpay':
+				wxp = WechatPayClient()
+				url = await wxp.create_h5_url(request, rl, action)
 				return url
 
 			exception(f'exception ...........{self.pc_name}')
