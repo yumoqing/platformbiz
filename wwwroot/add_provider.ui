@@ -1,0 +1,36 @@
+{% set roles = get_user_roles(get_user()) %}
+{% if owner.operator in roles %}
+{
+	"widgettype": "Form",
+	"options": {
+	"description": "添加平台供应商",
+	"submit_url": "{{entire_url('add_provider.dspy')}}",
+	"fields":[
+		{
+			"name": "orgname",
+			"label": "供应商名",
+			"uitype": "str",
+			"required": true
+		}
+	]
+}
+{% else %}
+{
+	“widgettype": "PopupWindow"
+	"options": {
+		"content":{
+			"widgettype": "Text",
+			"options": {
+				"otext": "你无权使用此功能",
+				"i18n": true
+			}
+		},
+		"auto_open": true,
+		"auto_close": true,
+		"tiemout": 4,
+		"archor": "cc",
+		"cwidth": 5,
+		"cheight": 10
+	}
+}
+{% endif %}
