@@ -4,10 +4,10 @@ async with get_sor_context(request._run_ns, 'platformbiz') as sor:
 	rec = None
 	if not recs:
 		orgid = uuid()
-		ns = {
+		ns = DictObject(**{
 			"id": orgid,
 			"orgname": orgname
-		}
+		})
 		await create_org(sor, ns, ['provider'])
 		await openProviderAccounts(sor, '0', orgid)
 		rec = ns
