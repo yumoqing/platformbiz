@@ -1,5 +1,5 @@
 {% set roles = get_user_roles(get_user()) %}
-{% if owner.operator in roles %}
+{% if "owner.operator" in roles %}
 {
 	"widgettype": "Form",
 	"options": {
