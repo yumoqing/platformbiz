@@ -4,7 +4,6 @@
 	"widgettype": "Form",
 	"options": {
 		"description": "添加平台供应商",
-		"submit_url": "{{entire_url('add_provider.dspy')}}",
 		"fields":[
 			{
 				"name": "orgname",
