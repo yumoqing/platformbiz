@@ -3,20 +3,34 @@
 {
 	"widgettype": "Form",
 	"options": {
-	"description": "添加平台供应商",
-	"submit_url": "{{entire_url('add_provider.dspy')}}",
-	"fields":[
-		{
-			"name": "orgname",
-			"label": "供应商名",
-			"uitype": "str",
-			"required": true
-		}
-	]
+		"description": "添加平台供应商",
+		"submit_url": "{{entire_url('add_provider.dspy')}}",
+		"fields":[
+			{
+				"name": "orgname",
+				"label": "供应商名",
+				"uitype": "str",
+				"required": true
+			}
+		],
+		"binds":[
+			{
+				"wid": "self",
+				"event": "submit",
+				"actiontype": "urlwidget",
+				"target": "self",
+				"options":{
+					"method": "POST",
+					"params":{},
+					"url": "{{entire_url('add_provider.dspy')}}"
+				}
+			}
+		]
+	}
 }
 {% else %}
 {
-	“widgettype": "PopupWindow"
+	"widgettype": "PopupWindow",
 	"options": {
 		"content":{
 			"widgettype": "Text",
