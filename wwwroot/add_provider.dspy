@@ -1,6 +1,7 @@
 orgname = params_kw.orgname
 async with get_sor_context(request._run_ns, 'platformbiz') as sor:
 	recs = await sor.R('organization', {'orgname': orgname})
+	rec = None
 	if not recs:
 		orgid = uuid()
 		ns = {
@@ -9,7 +10,9 @@ async with get_sor_context(request._run_ns, 'platformbiz') as sor:
 		}
 		await create_org(sor, ns, ['provider'])
 		await openProviderAccounts(sor, '0', orgid)
-		recs = ns
-	return UiMessage(title='添加供应商', message=f'添加成功, 新供应商id={recs.id}')
+		rec = ns
+	else:
+		rec = recs[0]
+	return UiMessage(title='添加供应商', message=f'添加成功, 新供应商id={rec.id}')
 return UiError(title='添加供应商', message=f'添加失败')
 	
