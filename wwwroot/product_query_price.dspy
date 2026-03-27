@@ -1,16 +1,29 @@
-
+debug(f'{params_kw=}')
 product_type = params_kw.product_type
 product_id = params_kw.product_id
 config_data = params_kw.config_data
-
+if 'off_peak' in config_data.keys():
+	if off_peak in ['Y', '1', 1]:
+		config_data.off_peak = True
+	elif off_peak in ['N', '0', 0]:
+		config_data/off_peak = False
+debug(f'{config_data=}')
 if product_type == 'llm':
-	r = await llm_query_price(product_id, config_data)
-	return {
-		"status": "ok",
-		"data": {
-			"prices": r
+	try:
+		r = await llm_query_price(product_id, config_data)
+		return {
+			"status": "ok",
+			"data": {
+				"prices": r
+			}
 		}
-	}
+	except Exception as e:
+		return {
+			"status": "error",
+			"data": {
+				"message": str(e)
+			}
+		}
 return {
 	"status": "error",
 	"data": {
