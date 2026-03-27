@@ -1,0 +1,10 @@
+product_type = params_kw.product_type
+if product_type == 'llm':
+	r = await path_call(request, '/llmage/llm_query_price.dspy', params=params_kw)
+	return r
+return {
+	"status": "error",
+	"data": {
+		"message": f"{product_type=} 未知产品类型"
+	}
+}
