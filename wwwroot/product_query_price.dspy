@@ -4,7 +4,7 @@ product_id = params_kw.product_id
 config_data = params_kw.config_data
 
 if product_type == 'llm':
-	r = await llm_query_price(prduct_id, config_data)
+	r = await llm_query_price(product_id, config_data)
 	return r
 return {
 	"status": "error",
