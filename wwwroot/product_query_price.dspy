@@ -12,11 +12,19 @@ if 'off_peak' in keys:
 debug(f'{config_data=}')
 if product_type == 'llm':
 	try:
-		r = await llm_query_price(product_id, config_data)
+		recs = await llm_query_price(product_id, config_data)
+		amount = 0
+		original_amount = 0
+		for r in recs:
+			amount += r.amount
+			if r.original_amount:
+				original_amount += r.original_amount
+
 		return {
 			"status": "ok",
 			"data": {
-				"prices": r
+				"amount": amount,
+				"original_amoutn": None if original_amount == 0 else original_amount
 			}
 		}
 	except Exception as e:
