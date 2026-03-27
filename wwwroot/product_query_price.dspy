@@ -4,7 +4,7 @@ product_id = params_kw.product_id
 config_data = params_kw.config_data
 keys = [k for k in config_data.keys()]
 if 'off_peak' in keys:
-	off_peak = config.off_peak
+	off_peak = config_data.off_peak
 	if off_peak in ['Y', '1', 1]:
 		config_data.off_peak = True
 	elif off_peak in ['N', '0', 0]:
