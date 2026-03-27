@@ -2,10 +2,12 @@ debug(f'{params_kw=}')
 product_type = params_kw.product_type
 product_id = params_kw.product_id
 config_data = params_kw.config_data
-if 'off_peak' in config_data.keys():
-	if 'off_peak' in ['Y', '1', 1]:
+keys = [k for k in config_data.keys()]
+if 'off_peak' in keys:
+	off_peak = config.off_peak
+	if off_peak in ['Y', '1', 1]:
 		config_data.off_peak = True
-	elif 'off_peak' in ['N', '0', 0]:
+	elif off_peak in ['N', '0', 0]:
 		config_data.off_peak = False
 debug(f'{config_data=}')
 if product_type == 'llm':
