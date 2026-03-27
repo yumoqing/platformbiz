@@ -1,7 +1,10 @@
 
 product_type = params_kw.product_type
+product_id = params_kw.product_id
+config_data = params_kw.config_data
+
 if product_type == 'llm':
-	r = await path_call('/llmage/llm_query_price.dspy')
+	r = await llm_query_price(prduct_id, config_data)
 	return r
 return {
 	"status": "error",
