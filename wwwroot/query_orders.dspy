@@ -1,6 +1,6 @@
 orgid = await get_userorgid()
 page = int(params_kw.get('page', 1))
-data = await llm_query_order(orgid, page)
+data = await llm_query_orders(orgid, page)
 return {
 	'status': 'ok',
 	'data': data
