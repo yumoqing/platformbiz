@@ -1,0 +1,77 @@
+{
+    "summary": [
+        {
+            "name": "agreedetail",
+            "title": "协议明细",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "name",
+            "title": "协议明细名",
+            "type": "str",
+            "length": 100
+        },
+        {
+            "name": "agreeid",
+            "title": "协议id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "prodtypeid",
+            "title": "产品类型id",
+            "type": "str",
+            "length": 32,
+            "nullable": "yes"
+        },
+        {
+            "name": "discount",
+            "title": "折扣",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "step_type",
+            "title": "阶梯类型",
+            "type": "str",
+            "length": 1,
+            "nullable": "yes"
+        }
+    ],
+    "indexes": [
+        {
+            "name": "idx1",
+            "idxtype": "unique",
+            "idxfields": [
+                "agreeid",
+                "prodtypeid"
+            ]
+        }
+    ],
+    "codes": [
+        {
+            "field": "step_type",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='step_type'"
+        },
+        {
+            "field": "prodtypeid",
+            "table": "prodtype",
+            "valuefield": "id",
+            "textfield": "name"
+        }
+    ]
+}

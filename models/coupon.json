@@ -1,0 +1,80 @@
+{
+    "summary": [
+        {
+            "name": "coupon",
+            "title": "优惠券",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "name",
+            "title": "优惠券名",
+            "type": "str",
+            "length": 100
+        },
+        {
+            "name": "coupontypeid",
+            "title": "优惠券类型id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "customerid",
+            "title": "客户id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "amount",
+            "title": "金额",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "enable_date",
+            "title": "启用日期",
+            "type": "date"
+        },
+        {
+            "name": "expire_date",
+            "title": "失效日期",
+            "type": "date"
+        },
+        {
+            "name": "coupon_state",
+            "title": "状态",
+            "type": "str",
+            "length": 1
+        }
+    ],
+    "codes": [
+        {
+            "field": "coupontypeid",
+            "table": "coupontype",
+            "valuefield": "id",
+            "textfield": "name"
+        },
+        {
+            "field": "customerid",
+            "table": "organization",
+            "valuefield": "id",
+            "textfield": "orgname"
+        },
+        {
+            "field": "coupon_state",
+            "table": "appcodes)kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='coupon_state'"
+        }
+    ]
+}

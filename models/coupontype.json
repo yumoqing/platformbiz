@@ -1,0 +1,95 @@
+{
+    "summary": [
+        {
+            "name": "coupontype",
+            "title": "优惠券类型",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "orgid",
+            "title": "发放机构",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "name",
+            "title": "优惠券名",
+            "type": "str",
+            "length": 100
+        },
+        {
+            "name": "use_ptids",
+            "title": "可用产品id集",
+            "type": "str",
+            "length": 4000
+        },
+        {
+            "name": "void_ptids",
+            "title": "不可用产品id集",
+            "type": "str",
+            "length": 4000
+        },
+        {
+            "name": "mintransamt",
+            "title": "最低交易金额",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "use_multiple",
+            "title": "是否可用多张",
+            "type": "str",
+            "length": 1
+        },
+        {
+            "name": "with_others",
+            "title": "是否与其他优惠券同用",
+            "type": "str",
+            "length": 1
+        },
+        {
+            "name": "issue_action",
+            "title": "发放客户动作",
+            "type": "str",
+            "length": 100
+        },
+        {
+            "name": "issue_condition",
+            "title": "发放条件",
+            "type": "str",
+            "length": 1000
+        }
+    ],
+    "codes": [
+        {
+            "field": "use_multiple",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='yesno'"
+        },
+        {
+            "field": "with_others",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='yesno'"
+        },
+        {
+            "field": "orgid",
+            "table": "organization",
+            "valuefield": "id",
+            "textfield": "orgname"
+        }
+    ]
+}

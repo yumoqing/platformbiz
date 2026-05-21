@@ -1,0 +1,41 @@
+{
+    "summary": [
+        {
+            "name": "paychannel",
+            "title": "支付渠道",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "name",
+            "title": "名字",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "fee_rate",
+            "title": "费率",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "enable_date",
+            "title": "启用日期",
+            "type": "date"
+        },
+        {
+            "name": "expire_date",
+            "title": "停用日期",
+            "type": "date"
+        }
+    ]
+}

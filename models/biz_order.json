@@ -1,0 +1,118 @@
+{
+    "summary": [
+        {
+            "name": "biz_order",
+            "title": "订单",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "customerid",
+            "title": "客户id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "resellerid",
+            "title": "分销商id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "order_date",
+            "title": "订单日期",
+            "type": "date"
+        },
+        {
+            "name": "order_status",
+            "title": "订单状态",
+            "type": "str",
+            "length": 1
+        },
+        {
+            "name": "business_op",
+            "title": "业务操作",
+            "type": "str",
+            "length": 255
+        },
+        {
+            "name": "amount",
+            "title": "金额",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "userid",
+            "title": "用户id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "ordertype",
+            "title": "订单类型",
+            "type": "str",
+            "length": 10
+        },
+        {
+            "name": "pay_date",
+            "title": "支付时间",
+            "type": "timestamp"
+        },
+        {
+            "name": "origin_orderid",
+            "title": "原订单",
+            "type": "str",
+            "length": 32
+        }
+    ],
+    "codes": [
+        {
+            "field": "customerid",
+            "table": "organization",
+            "valuefield": "id",
+            "textfield": "orgname"
+        },
+        {
+            "field": "resellerid",
+            "table": "organization",
+            "valuefield": "id",
+            "textfield": "orgname"
+        },
+        {
+            "field": "order_status",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='order_status'"
+        },
+        {
+            "field": "business_op",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='business_op'"
+        },
+        {
+            "field": "userid",
+            "table": "users",
+            "valuefield": "id",
+            "textfield": "name"
+        },
+        {
+            "field": "ordertype",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='ordertype'"
+        }
+    ]
+}

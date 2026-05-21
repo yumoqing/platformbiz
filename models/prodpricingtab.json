@@ -1,0 +1,65 @@
+{
+    "summary": [
+        {
+            "name": "prodpricingtab",
+            "title": "产品计费表",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "prodpricingid",
+            "title": "产品计价id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "ptspecid",
+            "title": "产品类型规格id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "specvalue",
+            "title": "规格值",
+            "type": "str",
+            "length": 3000,
+            "nullable": "yes"
+        },
+        {
+            "name": "unit_value",
+            "title": "单位值",
+            "type": "long",
+            "default": 1
+        },
+        {
+            "name": "unit_amt",
+            "title": "价格值",
+            "type": "float",
+            "length": 18
+        }
+    ],
+    "codes": [
+        {
+            "field": "prodpricingid",
+            "table": "prodpricing",
+            "valuefield": "id",
+            "textfield": "id"
+        },
+        {
+            "field": "ptspecid",
+            "table": "prodtypespec",
+            "valuefield": "id",
+            "textfield": "name"
+        }
+    ]
+}

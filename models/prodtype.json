@@ -1,0 +1,43 @@
+{
+    "summary": [
+        {
+            "name": "prodtype",
+            "title": "产品类型",
+            "primary": [
+                "id"
+            ],
+            "catelog": "hierarrchy_entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "name",
+            "title": "产品类型名称",
+            "type": "str",
+            "length": 100
+        },
+        {
+            "name": "enable_date",
+            "title": "启用日期",
+            "type": "date"
+        },
+        {
+            "name": "expire_date",
+            "title": "失效日期",
+            "type": "date"
+        },
+        {
+            "name": "parentid",
+            "title": "父类型",
+            "type": "str",
+            "length": 32,
+            "nullable": "yes"
+        }
+    ]
+}

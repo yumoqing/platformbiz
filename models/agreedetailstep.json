@@ -1,0 +1,44 @@
+{
+    "summary": [
+        {
+            "name": "agreedetailstep",
+            "title": "协议阶梯折扣",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "adid",
+            "title": "协议明细id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "minamt",
+            "title": "最低金额",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "maxamt",
+            "title": "最大金额",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "discount",
+            "title": "折扣值",
+            "type": "float",
+            "length": 18
+        }
+    ]
+}

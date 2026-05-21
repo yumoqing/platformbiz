@@ -1,0 +1,103 @@
+{
+    "summary": [
+        {
+            "name": "resource",
+            "title": "客户资源",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "orgid",
+            "title": "机构id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "resellerid",
+            "title": "商户id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "orderid",
+            "title": "订单id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "prodid",
+            "title": "产品id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "providerrid",
+            "title": "供应商资源id",
+            "type": "str",
+            "length": 100
+        },
+        {
+            "name": "attachedrid",
+            "title": "关联产品id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "enable_date",
+            "title": "开始日期",
+            "type": "date"
+        },
+        {
+            "name": "expire_date",
+            "title": "失效日期",
+            "type": "date"
+        },
+        {
+            "name": "spec_data",
+            "title": "规格数据",
+            "type": "str",
+            "length": 4000
+        },
+        {
+            "name": "access_info",
+            "title": "登录信息",
+            "type": "str",
+            "length": 4000
+        }
+    ],
+    "codes": [
+        {
+            "field": "orgid",
+            "table": "organization",
+            "valuefield": "id",
+            "textfield": "orgname"
+        },
+        {
+            "field": "resellerid",
+            "table": "organization",
+            "valuefield": "id",
+            "textfield": "orgname"
+        },
+        {
+            "field": "prodid",
+            "table": "product",
+            "valuefield": "id",
+            "textfield": "name"
+        },
+        {
+            "field": "attachedrid",
+            "table": "resource",
+            "valuefield": "id",
+            "textfield": "name"
+        }
+    ]
+}

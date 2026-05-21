@@ -1,0 +1,61 @@
+{
+    "summary": [
+        {
+            "name": "biz_orderdetail",
+            "title": "订单明细",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "orderid",
+            "title": "订单号",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "productid",
+            "title": "产品id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "product_cnt",
+            "title": "产品数量",
+            "type": "long"
+        },
+        {
+            "name": "prod_config",
+            "title": "产品配置",
+            "type": "text"
+        },
+        {
+            "name": "list_amount",
+            "title": "原价",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "trans_amount",
+            "title": "交易金额",
+            "type": "float",
+            "length": 18
+        }
+    ],
+    "codes": [
+        {
+            "field": "productid",
+            "table": "product",
+            "valuefield": "id",
+            "textfield": "name"
+        }
+    ]
+}

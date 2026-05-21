@@ -1,0 +1,66 @@
+{
+    "summary": [
+        {
+            "name": "coupon_log",
+            "title": "优惠券使用日志",
+            "primary": [
+                "id"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "couponid",
+            "title": "优惠券id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "customerid",
+            "title": "客户id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "resellerid",
+            "title": "商户id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "amount",
+            "title": "金额",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "act_date",
+            "title": "使用日期",
+            "type": "date"
+        },
+        {
+            "name": "act_timestamp",
+            "title": "使用时间戳",
+            "type": "timestamp"
+        },
+        {
+            "name": "action",
+            "title": "行为",
+            "type": "str",
+            "length": 1,
+            "nullable": "no"
+        },
+        {
+            "name": "orderid",
+            "title": "订单id",
+            "type": "str",
+            "length": 32
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "summary": [
+        {
+            "name": "distributionagreement",
+            "title": "分销协议",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "providerid",
+            "title": "供应商ID",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "resellerid",
+            "title": "分销商ID",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "sign_date",
+            "title": "签订日期",
+            "type": "date",
+            "length": 32
+        },
+        {
+            "name": "effect_date",
+            "title": "起效日期",
+            "type": "date",
+            "length": 255
+        },
+        {
+            "name": "agreement_doc",
+            "title": "协议文本",
+            "type": "str",
+            "length": 4000
+        }
+    ]
+}

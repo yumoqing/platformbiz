@@ -1,0 +1,61 @@
+{
+    "summary": [
+        {
+            "name": "agreeproduct",
+            "title": "协议授权产品",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "agreedetailid",
+            "title": "协议明细id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "providerpid",
+            "title": "供应方产品id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "resellerpid",
+            "title": "商户产品id",
+            "type": "str",
+            "length": 32
+        }
+    ],
+    "codes": [
+        {
+            "field": "providerpid",
+            "table": "product",
+            "valuefield": "id",
+            "textfield": "name",
+            "cond": "orgid=[[userorgid]] and prodtypeid=[[prodtypeid]]"
+        },
+        {
+            "field": "resellerpid",
+            "table": "product",
+            "valuefield": "id",
+            "textfield": "name",
+            "cond": "orgid=[[userorgid]]"
+        },
+        {
+            "field": "agreedetailid",
+            "table": "agreedetail",
+            "valuefield": "id",
+            "textfield": "name",
+            "cond": "agreeid=[[agreeid]]"
+        }
+    ]
+}

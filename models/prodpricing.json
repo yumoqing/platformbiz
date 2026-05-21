@@ -1,0 +1,70 @@
+{
+    "summary": [
+        {
+            "name": "prodpricing",
+            "title": "产品计费",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "prodid",
+            "title": "产品id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "enable_date",
+            "title": "启用日期",
+            "type": "date"
+        },
+        {
+            "name": "expire_date",
+            "title": "失效日期",
+            "type": "date"
+        },
+        {
+            "name": "pricing_method",
+            "title": "计价方式",
+            "type": "str",
+            "length": 1
+        },
+        {
+            "name": "apiid",
+            "title": "外部计费apiid",
+            "type": "str",
+            "length": 32,
+            "nullable": "yes"
+        }
+    ],
+    "codes": [
+        {
+            "field": "prodid",
+            "table": "product",
+            "valuefield": "id",
+            "textfield": "name"
+        },
+        {
+            "field": "pricing_method",
+            "table": "appcodes_kv",
+            "valuefield": "k",
+            "textfield": "v",
+            "cond": "parentid='pricing_method'"
+        },
+        {
+            "field": "apiid",
+            "table": "jsonhttpapi",
+            "valuefield": "id",
+            "textfield": "name"
+        }
+    ]
+}

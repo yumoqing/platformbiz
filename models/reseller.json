@@ -1,0 +1,54 @@
+{
+    "summary": [
+        {
+            "name": "reseller",
+            "title": "商户",
+            "primary": [
+                "id"
+            ],
+            "catelog": "entity"
+        }
+    ],
+    "fields": [
+        {
+            "name": "id",
+            "title": "id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "orgid",
+            "title": "机构id",
+            "type": "str",
+            "length": 32
+        },
+        {
+            "name": "transrate",
+            "title": "交易费率",
+            "type": "float",
+            "length": 18
+        },
+        {
+            "name": "enable_date",
+            "title": "有效日期",
+            "type": "date"
+        },
+        {
+            "name": "expire_date",
+            "title": "失效日期",
+            "type": "date",
+            "default": "9999-12-31"
+        },
+        {
+            "name": "apply_date",
+            "title": "申请日期",
+            "type": "date"
+        },
+        {
+            "name": "oper_uid",
+            "title": "操作用户id",
+            "type": "str",
+            "length": 32
+        }
+    ]
+}
