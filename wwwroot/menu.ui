@@ -1,27 +1,14 @@
 {% set roles = get_user_roles(get_user()) %}
 {
-	"widgettype":"Menu",
-	"options":{
-		"target":"page_center",
-		"cwidth":10,
-		"items":[
-{% if 'reseller.operator' in roles %}
-			{
-				"name":"provider",
-				"label":"供应商管理"
-				"url":"{{entire_url('/platformbiz/provider')}}"
-			}
-{% endif %}
-{% if 'reseller.sale' in roles %}
-			{
-				"name":"reseller",
-				"label":"分销商管理",
-				"url":"{{entire_url('/platformbiz/reseller'}}"
-			}
-{% endif %}
-{% if 'reseller.accountant' in roles %}
-{% endif %}
-			{}
-		]
-	}
+    "widgettype": "Menu",
+    "id": "platformbiz_menu",
+    "options": {
+        "items": [
+            {
+                "name": "dashboard",
+                "label": "平台业务",
+                "url": "{{entire_url('/platformbiz/index.ui')}}"
+            }
+        ]
+    }
 }
