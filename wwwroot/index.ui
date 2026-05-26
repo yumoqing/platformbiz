@@ -153,10 +153,10 @@
         {
             "widgettype": "VBox",
             "id": "platformbiz_content",
+            "css": "filler",
             "options": {
                 "width": "100%",
-                "flex": "1",
-                "marginTop": "20px"
+                "overflowY": "auto"
             }
         }
     ]
