@@ -43,7 +43,8 @@
             "name": "mintransamt",
             "title": "最低交易金额",
             "type": "float",
-            "length": 18
+            "length": 18,
+            "dec": 2
         },
         {
             "name": "use_multiple",

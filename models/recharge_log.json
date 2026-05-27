@@ -37,13 +37,15 @@
             "name": "recharge_amt",
             "title": "充值金额",
             "type": "float",
-            "length": 18
+            "length": 18,
+            "dec": 2
         },
         {
             "name": "fee_rate",
             "title": "充值费率",
             "type": "float",
-            "length": 18
+            "length": 18,
+            "dec": 2
         },
         {
             "name": "fee_amt",
