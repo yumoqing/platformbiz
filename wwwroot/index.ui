@@ -57,9 +57,9 @@
                                     "widgettype": "VBox",
                                     "options": {
                                         "css": "card",
-                                        "padding": "24px",
+                                        "padding": "16px",
                                         "cursor": "pointer",
-                                        "cheight": 12,
+                                        
                                         "cwidth": 23
                                     },
                                     "binds": [
@@ -106,9 +106,9 @@
                                     "widgettype": "VBox",
                                     "options": {
                                         "css": "card",
-                                        "padding": "24px",
+                                        "padding": "16px",
                                         "cursor": "pointer",
-                                        "cheight": 12,
+                                        
                                         "cwidth": 23
                                     },
                                     "binds": [
