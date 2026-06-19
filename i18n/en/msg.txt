@@ -1,0 +1,145 @@
+产品管理: Product Management
+产品名称: Product Name
+产品编码: Product Code
+产品类型: Product Type
+产品价格: Product Price
+产品状态: Product Status
+产品描述: Product Description
+新增产品: Add Product
+编辑产品: Edit Product
+删除产品: Delete Product
+上架: List
+下架: Delist
+已上架: Listed
+已下架: Delisted
+订单管理: Order Management
+订单编号: Order Number
+订单金额: Order Amount
+订单状态: Order Status
+订单时间: Order Time
+订单详情: Order Details
+新增订单: Add Order
+删除订单: Delete Order
+待支付: Pending Payment
+已支付: Paid
+已取消: Cancelled
+已退款: Refunded
+已完成: Completed
+支付: Pay
+退款: Refund
+取消订单: Cancel Order
+优惠券管理: Coupon Management
+优惠券名称: Coupon Name
+优惠券类型: Coupon Type
+优惠券金额: Coupon Amount
+优惠券折扣: Coupon Discount
+使用条件: Usage Conditions
+使用次数: Usage Count
+有效期: Validity Period
+新增优惠券: Add Coupon
+编辑优惠券: Edit Coupon
+删除优惠券: Delete Coupon
+发放: Distribute
+停用: Disable
+已领取: Claimed
+已使用: Used
+已过期: Expired
+充值管理: Recharge Management
+充值金额: Recharge Amount
+充值时间: Recharge Time
+充值方式: Recharge Method
+充值记录: Recharge Records
+余额: Balance
+充值: Recharge
+协议管理: Agreement Management
+协议名称: Agreement Name
+协议内容: Agreement Content
+协议状态: Agreement Status
+签署状态: Signing Status
+新增协议: Add Agreement
+编辑协议: Edit Agreement
+删除协议: Delete Agreement
+签署: Sign
+已签署: Signed
+未签署: Unsigned
+资源管理: Resource Management
+资源名称: Resource Name
+资源类型: Resource Type
+资源大小: Resource Size
+资源路径: Resource Path
+上传资源: Upload Resource
+删除资源: Delete Resource
+下载: Download
+推广链接: Promotion Link
+链接名称: Link Name
+链接地址: Link URL
+链接状态: Link Status
+新增链接: Add Link
+编辑链接: Edit Link
+删除链接: Delete Link
+点击量: Clicks
+转化量: Conversions
+业务订单: Business Order
+客户名称: Customer Name
+供应商名称: Supplier Name
+备注: Remarks
+创建时间: Created Time
+更新时间: Updated Time
+搜索: Search
+名称或编码: Name or Code
+操作: Actions
+描述: Description
+类型: Type
+状态: Status
+名称: Name
+编码: Code
+金额: Amount
+数量: Quantity
+新增: Add
+保存: Save
+取消: Cancel
+确认: Confirm
+删除: Delete
+编辑: Edit
+查看: View
+导出: Export
+打印: Print
+刷新: Refresh
+返回: Back
+提交: Submit
+重置: Reset
+Conform: Conform
+Discard: Discard
+Submit: Submit
+Reset: Reset
+Cancel: Cancel
+全部: All
+日期: Date
+用户: User
+手机号: Phone Number
+邮箱: Email
+地址: Address
+规格: Specification
+折扣: Discount
+原价: Original Price
+实付金额: Actual Amount Paid
+支付方式: Payment Method
+支付时间: Payment Time
+物流信息: Logistics Information
+快递公司: Express Company
+快递单号: Tracking Number
+发货时间: Shipping Time
+收货时间: Delivery Time
+评价: Review
+评分: Rating
+评价内容: Review Content
+商品图片: Product Image
+商品详情: Product Details
+库存: Stock
+销量: Sales Volume
+分类: Category
+标签: Tag
+推荐: Recommended
+热门: Popular
+新品: New Arrival
+促销: Promotion
