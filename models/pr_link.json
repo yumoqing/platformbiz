@@ -1,66 +1,60 @@
 {
-    "summary": [
-        {
-            "name": "pr_link",
-            "title": "供销链",
-            "primary": [
-                "id"
-            ],
-            "catelog": "entity"
-        }
-    ],
-    "fields": [
-        {
-            "name": "id",
-            "title": "id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "odid",
-            "title": "订单明细id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "providerid",
-            "title": "供应方id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "resellerid",
-            "title": "分销方id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "pr_amount",
-            "title": "供销金额",
-            "type": "float",
-            "length": 18,
-            "dec": 2
-        },
-        {
-            "name": "list_amount",
-            "title": "报价",
-            "type": "float",
-            "length": 18,
-            "dec": 2
-        }
-    ],
-    "codes": [
-        {
-            "field": "providerid",
-            "table": "organization",
-            "valuefield": "id",
-            "textfield": "orgname"
-        },
-        {
-            "field": "resellerid",
-            "table": "organization",
-            "valuefield": "id",
-            "textfield": "orgname"
-        }
-    ]
+  "summary": [
+    {
+      "name": "pr_link",
+      "title": "供销链",
+      "primary": [
+        "id"
+      ],
+      "catelog": "entity"
+    }
+  ],
+  "fields": [
+    {
+      "name": "id",
+      "title": "id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "odid",
+      "title": "订单明细id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "providerid",
+      "title": "供应方id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "resellerid",
+      "title": "分销方id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "pr_amount",
+      "title": "供销金额",
+      "type": "float",
+      "length": 18,
+      "dec": 2
+    },
+    {
+      "name": "list_amount",
+      "title": "报价",
+      "type": "float",
+      "length": 18,
+      "dec": 2
+    }
+  ],
+  "codes": [
+    {
+      "field": "providerid",
+      "table": "supplychain.suppliers",
+      "valuefield": "id",
+      "textfield": "supplier_name"
+    }
+  ]
 }

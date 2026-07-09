@@ -1,141 +1,135 @@
 {
-    "summary": [
-        {
-            "name": "agreement",
-            "title": "分销协议",
-            "primary": [
-                "id"
-            ]
-        }
-    ],
-    "fields": [
-        {
-            "name": "id",
-            "title": "id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "name",
-            "title": "协议名称",
-            "type": "str",
-            "length": 100
-        },
-        {
-            "name": "providerid",
-            "title": "供应商机构id",
-            "type": "str",
-            "length": 32,
-            "nullable": "yes"
-        },
-        {
-            "name": "resellerid",
-            "title": "商户id",
-            "type": "str",
-            "length": 32,
-            "nullable": "no"
-        },
-        {
-            "name": "prodpricing_mode",
-            "title": "产品计价模式",
-            "type": "str",
-            "length": 1,
-            "nullable": "no"
-        },
-        {
-            "name": "settle_mode",
-            "title": "结算方式",
-            "type": "str",
-            "length": 1
-        },
-        {
-            "name": "settle_dp",
-            "title": "结算日期模版",
-            "type": "str",
-            "length": 255
-        },
-        {
-            "name": "protocolfile",
-            "title": "协议文件",
-            "type": "str",
-            "length": 255
-        },
-        {
-            "name": "enable_date",
-            "title": "起效日期",
-            "type": "date"
-        },
-        {
-            "name": "expire_date",
-            "title": "失效日期",
-            "type": "date"
-        },
-        {
-            "name": "auto_renew",
-            "title": "自动续期",
-            "type": "str",
-            "length": 1
-        },
-        {
-            "name": "agree_state",
-            "title": "协议状态",
-            "type": "str",
-            "length": 1
-        },
-        {
-            "name": "provideruid",
-            "title": "供应方uid",
-            "type": "str",
-            "length": 32
-        }
-    ],
-    "codes": [
-        {
-            "field": "providerid",
-            "table": "organization",
-            "valuefield": "id",
-            "textfield": "orgname"
-        },
-        {
-            "field": "resellerid",
-            "table": "organization",
-            "valuefield": "id",
-            "textfield": "orgname"
-        },
-        {
-            "field": "auto_renew",
-            "table": "appcodes_kv",
-            "valuefield": "k",
-            "textfield": "v",
-            "cond": "parentid='yesno'"
-        },
-        {
-            "field": "prodpricing_mode",
-            "table": "appcodes_kv",
-            "valuefield": "k",
-            "textfield": "v",
-            "cond": "parentid='prodpricing_mode'"
-        },
-        {
-            "field": "settle_mode",
-            "table": "appcodes_kv",
-            "valuefield": "k",
-            "textfield": "v",
-            "cond": "parentid='settle_mode'"
-        },
-        {
-            "field": "agree_state",
-            "table": "appcodes_kv",
-            "valuefield": "k",
-            "textfield": "v",
-            "cond": "parentid='agree_state'"
-        },
-        {
-            "field": "provideruid",
-            "table": "users",
-            "valuefield": "id",
-            "textfield": "username",
-            "cond": "orgid=[[userorgid]]"
-        }
-    ]
+  "summary": [
+    {
+      "name": "agreement",
+      "title": "分销协议",
+      "primary": [
+        "id"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "name": "id",
+      "title": "id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "name",
+      "title": "协议名称",
+      "type": "str",
+      "length": 100
+    },
+    {
+      "name": "providerid",
+      "title": "供应商机构id",
+      "type": "str",
+      "length": 32,
+      "nullable": "yes"
+    },
+    {
+      "name": "resellerid",
+      "title": "商户id",
+      "type": "str",
+      "length": 32,
+      "nullable": "no"
+    },
+    {
+      "name": "prodpricing_mode",
+      "title": "产品计价模式",
+      "type": "str",
+      "length": 1,
+      "nullable": "no"
+    },
+    {
+      "name": "settle_mode",
+      "title": "结算方式",
+      "type": "str",
+      "length": 1
+    },
+    {
+      "name": "settle_dp",
+      "title": "结算日期模版",
+      "type": "str",
+      "length": 255
+    },
+    {
+      "name": "protocolfile",
+      "title": "协议文件",
+      "type": "str",
+      "length": 255
+    },
+    {
+      "name": "enable_date",
+      "title": "起效日期",
+      "type": "date"
+    },
+    {
+      "name": "expire_date",
+      "title": "失效日期",
+      "type": "date"
+    },
+    {
+      "name": "auto_renew",
+      "title": "自动续期",
+      "type": "str",
+      "length": 1
+    },
+    {
+      "name": "agree_state",
+      "title": "协议状态",
+      "type": "str",
+      "length": 1
+    },
+    {
+      "name": "provideruid",
+      "title": "供应方uid",
+      "type": "str",
+      "length": 32
+    }
+  ],
+  "codes": [
+    {
+      "field": "providerid",
+      "table": "supplychain.suppliers",
+      "valuefield": "id",
+      "textfield": "supplier_name"
+    },
+    {
+      "field": "auto_renew",
+      "table": "appcodes_kv",
+      "valuefield": "k",
+      "textfield": "v",
+      "cond": "parentid='yesno'"
+    },
+    {
+      "field": "prodpricing_mode",
+      "table": "appcodes_kv",
+      "valuefield": "k",
+      "textfield": "v",
+      "cond": "parentid='prodpricing_mode'"
+    },
+    {
+      "field": "settle_mode",
+      "table": "appcodes_kv",
+      "valuefield": "k",
+      "textfield": "v",
+      "cond": "parentid='settle_mode'"
+    },
+    {
+      "field": "agree_state",
+      "table": "appcodes_kv",
+      "valuefield": "k",
+      "textfield": "v",
+      "cond": "parentid='agree_state'"
+    },
+    {
+      "field": "provideruid",
+      "table": "users",
+      "valuefield": "id",
+      "textfield": "username",
+      "cond": "orgid=[[userorgid]]"
+    }
+  ]
 }

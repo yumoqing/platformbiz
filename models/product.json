@@ -1,114 +1,114 @@
 {
-    "summary": [
-        {
-            "name": "product",
-            "title": "产品",
-            "primary": [
-                "id"
-            ],
-            "catelog": "entity"
-        }
-    ],
-    "fields": [
-        {
-            "name": "id",
-            "title": "id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "name",
-            "title": "产品名称",
-            "type": "str",
-            "length": 100
-        },
-        {
-            "name": "prodtypeid",
-            "title": "产品类型id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "orgid",
-            "title": "产品机构",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "providerid",
-            "title": "供应商编号",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "agreeid",
-            "title": "分销协议id",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "providerpid",
-            "title": "供应方产品id",
-            "type": "str",
-            "length": 255
-        },
-        {
-            "name": "description",
-            "title": "描述",
-            "type": "str",
-            "length": 255
-        },
-        {
-            "name": "prod_state",
-            "title": "状态",
-            "type": "str",
-            "length": 32
-        },
-        {
-            "name": "product_code",
-            "title": "产品编码",
-            "type": "str",
-            "length": 100
-        },
-        {
-            "name": "spec_note",
-            "title": "规格说明",
-            "type": "str",
-            "length": 400
-        }
-    ],
-    "codes": [
-        {
-            "field": "prodtypeid",
-            "table": "prodtype",
-            "valuefield": "id",
-            "textfield": "name"
-        },
-        {
-            "field": "providerid",
-            "table": "organization",
-            "valuefield": "id",
-            "textfield": "orgname"
-        },
-        {
-            "field": "agreeid",
-            "table": "agreement",
-            "valuefield": "id",
-            "textfield": "name",
-            "cond": "resellerid=[[userorgid]]"
-        },
-        {
-            "field": "providerpid",
-            "table": "product",
-            "valuefield": "id",
-            "textfield": "name"
-        },
-        {
-            "field": "prod_state",
-            "table": "appcodes_kv",
-            "valuefield": "k",
-            "textfield": "v",
-            "cond": "parentid='prod_state'"
-        }
-    ]
+  "summary": [
+    {
+      "name": "product",
+      "title": "产品",
+      "primary": [
+        "id"
+      ],
+      "catelog": "entity"
+    }
+  ],
+  "fields": [
+    {
+      "name": "id",
+      "title": "id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "name",
+      "title": "产品名称",
+      "type": "str",
+      "length": 100
+    },
+    {
+      "name": "prodtypeid",
+      "title": "产品类型id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "orgid",
+      "title": "产品机构",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "providerid",
+      "title": "供应商编号",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "agreeid",
+      "title": "分销协议id",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "providerpid",
+      "title": "供应方产品id",
+      "type": "str",
+      "length": 255
+    },
+    {
+      "name": "description",
+      "title": "描述",
+      "type": "str",
+      "length": 255
+    },
+    {
+      "name": "prod_state",
+      "title": "状态",
+      "type": "str",
+      "length": 32
+    },
+    {
+      "name": "product_code",
+      "title": "产品编码",
+      "type": "str",
+      "length": 100
+    },
+    {
+      "name": "spec_note",
+      "title": "规格说明",
+      "type": "str",
+      "length": 400
+    }
+  ],
+  "codes": [
+    {
+      "field": "prodtypeid",
+      "table": "prodtype",
+      "valuefield": "id",
+      "textfield": "name"
+    },
+    {
+      "field": "providerid",
+      "table": "supplychain.suppliers",
+      "valuefield": "id",
+      "textfield": "supplier_name"
+    },
+    {
+      "field": "agreeid",
+      "table": "agreement",
+      "valuefield": "id",
+      "textfield": "name",
+      "cond": "resellerid=[[userorgid]]"
+    },
+    {
+      "field": "providerpid",
+      "table": "product",
+      "valuefield": "id",
+      "textfield": "name"
+    },
+    {
+      "field": "prod_state",
+      "table": "appcodes_kv",
+      "valuefield": "k",
+      "textfield": "v",
+      "cond": "parentid='prod_state'"
+    }
+  ]
 }
